@@ -47,27 +47,6 @@ The instructions for installing Docker vary according to your system configurati
 
 Installing Docker on Red Hat Enterprise Linux 7
 """""""""""""""""""""""""""""""""""""""""""""""
-You can install Docker in different ways, depending on your needs:
-
-- You can set up the Docker repositories and then install from them. This choice is the recommended approach because it simplifies the installation and upgrade tasks.
-
-- You can download the RPM package, install it manually, and manage upgrades manually. This choice is useful when Docker is installed on systems with limited or no access to the internet.
-
-Installing from the repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. Make sure that you are logged in as a user with ``sudo`` or ``root`` privileges.
-
-2. Install the required packages::
-
-    # sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-
-3. Add the repository::
-
-    # sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-
-4. Install Docker from the repository::
-
-    # sudo yum install docker-ce
 
 Installing from a package
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,9 +54,13 @@ Installing from a package
 
 2. Make sure that you are logged in as a user with ``sudo`` or ``root`` privileges.
 
+3. Download the latest Docker package from the link in step 1.
+ 
+    # wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.03.0.ce-1.el7.centos.x86_64.rpm
+
 3. Install Docker, changing the path in the following example to the path where you downloaded the Docker package::
 
-    # sudo yum install /path/to/package.rpm
+    # sudo yum install docker-ce-17.03.0.ce-1.el7.centos.x86_64.rpm
 
 Starting Docker on Red Hat Enterprise Linux 7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
