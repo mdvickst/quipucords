@@ -16,26 +16,26 @@ qpc, the command line tool that is installed by RPM, is available for `download 
 
       # rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 
-2. Add the COPR repo to your server. You can find the appropriate architecture and version on the `COPR qpc page <https://copr.fedorainfracloud.org/coprs/chambridge/qpc/>`_.
+2. Download the appropriate RPM for qpc. 
 
 
   - For Red Hat Enterprise Linux 7, enter the following command::
 
-      # wget -O /etc/yum.repos.d/chambridge-qpc-epel-7.repo https://copr.fedorainfracloud.org/coprs/chambridge/qpc/repo/epel-7/chambridge-qpc-epel-7.repo
+      # wget https://copr-be.cloud.fedoraproject.org/results/chambridge/qpc/epel-7-x86_64/00726243-qpc/qpc-0.0.1-1.git.490.809bffc.el7.centos.noarch.rpm 
 
   - For Red Hat Enterprise Linux 6, enter the following command::
 
-      # wget -O /etc/yum.repos.d/chambridge-qpc-epel-6.repo https://copr.fedorainfracloud.org/coprs/chambridge/qpc/repo/epel-6/chambridge-qpc-epel-6.repo
+      # wget https://copr-be.cloud.fedoraproject.org/results/chambridge/qpc/epel-6-x86_64/00726243-qpc/qpc-0.0.1-1.git.490.809bffc.el6.noarch.rpm
 
 3. Install the qpc beta package:
 
   - For Red Hat Enterprise Linux 7, enter the following command::
 
-      # yum -y install qpc
+      # yum -y install qpc-0.0.1-1.git.490.809bffc.el7.centos.noarch.rpm 
 
   - For Red Hat Enterprise Linux 6, enter the following command::
 
-      # yum -y install qpc
+      # yum -y install qpc-0.0.1-1.git.490.809bffc.el6.noarch.rpm
 
 Installing the Quipucords Server Requirement and Container Image
 ----------------------------------------------------------------
