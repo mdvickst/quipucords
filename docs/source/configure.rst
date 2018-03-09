@@ -103,4 +103,4 @@ After the connection between the qpc command line tool and the Quipucords server
 The ``qpc server login`` command retrieves a token that is used for authentication with subsequent command line interface commands. That token is removed when you log out of the server, and expires daily.
 
 
-`Continue <https://github.com/mdvickst/quipucords/blob/master/docs/source/getting_started.rst>`_
+`Go to Next Step <https://github.com/mdvickst/quipucords/blob/master/docs/source/getting_started.rst>`_
