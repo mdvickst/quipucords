@@ -54,7 +54,7 @@ Installing from a package
 
 2. Make sure that you are logged in as a user with ``sudo`` or ``root`` privileges.
 
-3. Download the latest Docker package from the link in step 1.
+3. Download the latest Docker package from the link in step 1::
  
     # wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.03.0.ce-1.el7.centos.x86_64.rpm
 
