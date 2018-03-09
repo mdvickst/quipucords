@@ -141,23 +141,26 @@ After Docker is installed, you can obtain and install the container image that e
 
 1. Download the server container image by entering the following command::
 
-    #  curl -k -O -sSL https://ftp.redhat.com/repo/container/quipucords.1.0.0.tar.gz
+    #  wget https://github.com/mdvickst/quipucords/archive/master.zip
 
 
-2. Load the container image into the local Docker registry with the following command::
+2. Unzip the download with the following command::
 
-    #  sudo docker load -i quipucords.1.0.0.tar.gz
+    #  unzip master.zip 
 
-The output appears similar to the following example::
+3. Change the working dirctory to the quipucord-master directory ::
 
-    Loaded image: quipucords:1.0.0
+    #  cd quipucords-master/
 
+4. Build the quipucords server container ::
 
-3. Verify the image within the local Docker registry by entering the following command::
+    #  sudo docker -D build . -t quipucords:latest
+
+5. Verify the image within the local Docker registry by entering the following command::
 
     #  sudo docker images
 
 The output appears similar to the following example::
 
   REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-  quipucords              1.0.0               fdadcc4b326f        3 days ago          969MB
+  quipucords              latest               fdadcc4b326f        3 days ago          969MB
