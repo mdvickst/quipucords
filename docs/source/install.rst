@@ -165,6 +165,6 @@ The output appears similar to the following example::
   REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
   quipucords              latest               a4c93a143080        3 days ago          969MB
  
- 
- `Continue <https://github.com/mdvickst/quipucords/blob/master/docs/source/getting_started.rst>`_
+
+`Continue <https://github.com/mdvickst/quipucords/blob/master/docs/source/getting_started.rst>`_
 
