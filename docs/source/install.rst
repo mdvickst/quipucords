@@ -139,28 +139,18 @@ Installing the Quipucords Server Container Image
 ------------------------------------------------
 After Docker is installed, you can obtain and install the container image that enables the use of the Quipucords server.
 
-1. Download the server container image by entering the following command::
+1. Download the server container image using your web browser and the link below then transfer it to your RHEL server where you are installing quipucords::
 
-    #  wget https://github.com/mdvickst/quipucords/archive/master.zip
+    #  https://spideroak.com/browse/share/JBoss_Scanner_1-2/quipucords-container/quipucords-release/
 
 
-2. Unzip the download with the following command::
+2. Load the container image into the local Docker registry with the following command::
 
-    #  unzip master.zip 
+    #  sudo docker load -i quipucords-container.tar.gz
 
-3. Change the working dirctory to the quipucord-master directory ::
+The output appears similar to the following example::
 
-    #  cd quipucords-master/
-
-4. Build the quipucords server container ::
-
-  - For Red Hat Enterprise Linux 7, enter the following command::
-
-      #  sudo docker -D build . -t quipucords:latest
-
-  - For Red Hat Enterprise Linux 6, enter the following command::
-
-      #  sudo docker -D build -t quipucords:latest .
+    Loaded image: quipucords:1.0.0
       
 
 5. Verify the image within the local Docker registry by entering the following command::
