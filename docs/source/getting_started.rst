@@ -125,13 +125,13 @@ After you set up your credentials and sources, you can run a Quipucords scan to 
 
 To create a scan, use the following steps:
 
-Create the scan by using the ``scan add`` command, specifying a name for the ``name`` option and one or more sources for the ``sources`` option::
+Create the scan by using the ``scan add`` command, specifying a name for the ``name`` option and one or more sources for the ``sources`` option and specifying one of more directories for the `ext-product-search-dirs` where JBoss EAP is typically installed on the machines::
 
-  # qpc scan add --name scan1 --sources source_name1 source_name2
+  # qpc scan add --name scan1 --sources source_name1 source_name2 --enabled-ext-product-search --ext-product-search-dirs /app /jboss /opt
 
 For example, if you want to create a scan called ``myscan`` with the network source ``mynetwork`` and the Satellite source ``mysatellite6``, you would enter the following command::
 
-  # qpc scan add --name myscan --sources mynetwork mysatellite6
+  # qpc scan add --name myscan --sources mynetwork mysatellite6 --enabled-ext-product-search --ext-product-search-dirs /app /jboss /opt
 
 Running a Scan
 --------------
@@ -178,15 +178,20 @@ Viewing the Scan Report
 -----------------------
 When the scan job completes, you have the capability to produce a report for that scan job. You can request a report with all the details, or facts, of the scan, or request a report with a summary. The summary report process runs steps to merge the facts found during the inspection of the various hosts that are contacted during the scan. When possible, the report process also runs steps to deduplicate redundant systems. For both types of reports, you can produce the report in JavaScript Object Notation (JSON) format or comma-separated values (CSV) format.
 
-To generate a summary report, enter the ``report summary`` command and specify the identifier for the scan job and the format for the output file.
+If scans are run separately for vCenter, Satellite and network sources please merge the results and submit a single report using the following command (where 1 2 3 4 represents each of the scan ids that were run)::
+ 
+   # qpc report merge --ids 1 2 3 4
+
+To generate a summary report, enter the ``report summary`` command and specify the identifier for the scan job or from the merge and the format for the output file.
 
 For example, if you want to create the report summary for a scan with the scan job identifier of ``1`` and you want to generate that report in CSV format in the ``~/scan_result.csv`` file, you would enter the following command::
 
-  # qpc report summary --id 1 --csv --output-file=~/scan_result.csv
+  # qpc report summary --report 1 --csv --output-file=~/scan_result.csv
 
 However, if you want to create the detailed report, you would use the ``report detail`` command.  This command takes the same options as the ``report summary`` command. The output is not deduplicated and merged, so it contains all facts from each source. For example, to create the detailed report for a scan with the scan job identifier ``1``, with CSV output in the ``~/scan_result.csv`` file, you would enter the following command::
 
-  # qpc report detail --id 1 --csv --output-file=~/scan_result.csv
+  # qpc report detail --report 1 --csv --output-file=~/scan_result.csv
+  
 
 Pausing and Restarting a Scan
 -----------------------------
