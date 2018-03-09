@@ -163,4 +163,4 @@ After Docker is installed, you can obtain and install the container image that e
 The output appears similar to the following example::
 
   REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-  quipucords              latest               fdadcc4b326f        3 days ago          969MB
+  quipucords              latest               a4c93a143080        3 days ago          969MB
