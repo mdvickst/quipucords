@@ -167,5 +167,5 @@ The output appears similar to the following example::
  
  
 
-`Continue <https://github.com/mdvickst/quipucords/blob/master/docs/source/configure.rst>`_
+`Go to Next Step <https://github.com/mdvickst/quipucords/blob/master/docs/source/configure.rst>`_
 
