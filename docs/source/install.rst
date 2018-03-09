@@ -154,7 +154,14 @@ After Docker is installed, you can obtain and install the container image that e
 
 4. Build the quipucords server container ::
 
-    #  sudo docker -D build . -t quipucords:latest
+  - For Red Hat Enterprise Linux 7, enter the following command::
+
+      #  sudo docker -D build . -t quipucords:latest
+
+  - For Red Hat Enterprise Linux 6, enter the following command::
+
+      #  sudo docker -D build -t quipucords:latest .
+      
 
 5. Verify the image within the local Docker registry by entering the following command::
 
