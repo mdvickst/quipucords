@@ -60,7 +60,7 @@ Installing from a package
 
 3. Install Docker, changing the path in the following example to the path where you downloaded the Docker package::
 
-    # sudo yum install docker-ce-17.03.0.ce-1.el7.centos.x86_64.rpm
+    # sudo yum install -y --setopt=obsoletes=0  docker-ce-17.03.0.ce-1.el7.centos.x86_64.rpm docker-ce-selinux-17.03.2.ce-1.el7.centos.noarch
 
 Starting Docker on Red Hat Enterprise Linux 7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
