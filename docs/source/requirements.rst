@@ -8,4 +8,4 @@ Before installing Quipucords in your environment, review the following guideline
 - The user account that Quipucords uses for the SSH connection into the target systems, otherwise known as the credential, must have adequate permissions to run commands and read certain files, such as privilege escalation required for the ``systemctl`` command.
 - The credential user account requires an sh shell or a similar shell. For example, the shell *cannot* be a /sbin/nologin or /bin/false shell.
 
-`Continue <https://github.com/mdvickst/quipucords/blob/master/docs/source/install.rst>`_
+`Go to Next Step <https://github.com/mdvickst/quipucords/blob/master/docs/source/install.rst>`_
