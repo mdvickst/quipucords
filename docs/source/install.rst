@@ -27,7 +27,7 @@ qpc, the command line tool that is installed by RPM, is available for `download 
 
       # wget https://copr-be.cloud.fedoraproject.org/results/chambridge/qpc/epel-6-x86_64/00726243-qpc/qpc-0.0.1-1.git.490.809bffc.el6.noarch.rpm
 
-3. Install the qpc beta package:
+3. Install the qpc package:
 
   - For Red Hat Enterprise Linux 7, enter the following command::
 
